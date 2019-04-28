@@ -1,3 +1,4 @@
 # shiba
+An arduino-compatible version of "Pluto", a smartwatch with the same form factor as the F91-W
 
-Old files for a watch that I designed. Some footprints and edge cut files sourced from "Pluto"
+I abandoned this project after finishing the hardware designs, but I learned a lot from working on it. I learned a lot about KiCAD and EDA stuff in general. I also learned that Arduino is slightly overrated. AVR Microcontrollers are not a one-size fits all, and direct driving an LCD with an MCU doesn't make a whole lot of sense. I had initially planned on direct driving the LCD to save space, but because the MCU I selected did not have a real-time clock, I had to use additional space on the board for an RTC chip that could be configured to interrupt the MCU. This means that there's no space left for other sensors and connectors that could be used to add new features to the watch. I had some ideas involving TOTP and a USB connector to make it act as a U2F device, but power and space constraints make a lot of the features I would want not viable. Maybe later on I'll do a project involving a low-power dumb watch, but it probably won't involve AVR
